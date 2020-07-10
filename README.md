@@ -6,6 +6,9 @@ Complete Weather App Using React - Weather API, a weather application using Open
 
 https://weather-demo-react.netlify.app/
 
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/308597e0-9ba2-49bd-b6b4-839607a6af37/deploy-status)](https://app.netlify.com/sites/weather-demo-react/deploys)
+
 ## Available Scripts
 
 In the project directory, you can run:
