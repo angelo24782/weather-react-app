@@ -4,7 +4,6 @@ import "weather-icons/css/weather-icons.css"
 import "bootstrap/dist/css/bootstrap.min.css";
 import WeatherComponent from './components/WeatherComponent/WeatherComponent';
 
-
 function App() {
 
   // api call api.openweathermap.org/data/2.5/weather?q=London,uk
@@ -12,7 +11,7 @@ function App() {
 
   const getWeather = async () => {
 
-    const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=${API_key}`);
+    const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=${API_key}`);
 
     const response = await api_call.json();
 
