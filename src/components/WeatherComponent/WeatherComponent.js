@@ -19,7 +19,7 @@ const WeatherComponent = () => {
             <div className="cards">
                 <h1>London</h1>
                 <h5 className="py-4">
-                    <i class="wi wi-day-sunny display-1"></i>
+                    <i className="wi wi-day-sunny display-1"></i>
                 </h5>
                 <h1 className="py-2">
                     25&deg;
