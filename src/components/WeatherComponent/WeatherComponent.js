@@ -1,35 +1,37 @@
-import React from 'react'
+import React from 'react';
+import "./WeatherComponent.css";
 
 const minMaxTemp = (min, max) => {
-    return (
-        <h3>
-            <span className="px-4">
-                {min}&deg;
+    if (min && max) {
+        return (
+            <h3>
+                <span className="px-4">
+                    {min}&deg;
             </span>
-            <span className="px-4">
-                {max}&deg;
+                <span className="px-4">
+                    {max}&deg;
             </span>
-        </h3>
-    )
+            </h3>
+        );
+    }
 }
 
-const WeatherComponent = () => {
+const WeatherComponent = (props) => {
     return (
-        <div className="container">
-            <div className="cards">
-                <h1>London</h1>
+        <div className="container text-light">
+            <div className="cards pt-4">
+                <h1>{props.city}</h1>
                 <h5 className="py-4">
-                    <i className="wi wi-day-sunny display-1"></i>
+                    <i className={`wi ${props.weatherIcon} display-1`}></i>
                 </h5>
-                <h1 className="py-2">
-                    25&deg;
-                </h1>
+
+                {props.temp_celsius ? <h1 className="py-2">{props.temp_celsius}&deg;</h1> : null}
 
                 {/** show max and min temp */}
-                {minMaxTemp(24, 19)}
+                {minMaxTemp(props.temp_min, props.temp_max)}
 
                 <h4 className="py-3">
-                    Slow Rain
+                    {props.description}
                 </h4>
 
             </div>
